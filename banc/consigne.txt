@@ -1,0 +1,43 @@
+Tu analyses un contrat pour un dirigeant qui doit décider s'il le signe. Lis le contrat ci-dessous et réponds UNIQUEMENT par un objet JSON valide, sans texte avant ni après, de la forme suivante :
+
+{
+  "resume": "trois phrases au plus",
+  "champs": {
+    "<nom_du_champ>": {"valeur": <valeur ou null>, "confiance": "haute" | "moyenne" | "basse", "citation": "<phrase exacte du contrat, ou chaîne vide>"}
+  },
+  "risques": [
+    {"categorie": "<une catégorie de la liste>", "citation": "<phrase exacte du contrat>", "confiance": "haute" | "moyenne" | "basse", "explication": "une phrase"}
+  ],
+  "risque_global": "aucun" | "faible" | "moyen" | "eleve"
+}
+
+Champs à remplir, tous obligatoires dans "champs". Si le contrat ne contient pas l'information, mets "valeur": null. N'invente jamais une valeur.
+- partie_a : première partie nommée (texte)
+- partie_b : seconde partie nommée (texte)
+- montant_eur : prix ou loyer convenu, en euros hors taxes, nombre seul ; par mois s'il est payé chaque mois, total s'il est forfaitaire ; une indemnité ou une pénalité n'est pas un prix
+- date_effet : date à laquelle le contrat produit ses effets, au format AAAA-MM-JJ
+- duree_mois : durée initiale en mois, nombre seul
+- preavis_jours : préavis pour mettre fin au contrat ou empêcher sa reconduction, en jours, nombre seul
+- renouvellement_tacite : true ou false
+- penalite_retard_pct_mois : pénalité de retard de paiement, en pourcentage par mois, nombre seul
+- loi_applicable : droit applicable (texte)
+- juridiction : ville du tribunal compétent (texte)
+- plafond_responsabilite_eur : plafond de responsabilité en euros, nombre seul (0 si toute responsabilité est exclue)
+- depot_garantie_eur : dépôt de garantie en euros, nombre seul
+- duree_confidentialite_ans : durée de l'obligation de confidentialité après la fin du contrat, en années, nombre seul
+- non_concurrence_mois : durée d'une interdiction de concurrence, en mois, nombre seul
+
+Catégories de risque autorisées, et seulement celles-ci :
+- renouvellement_tacite_piege : reconduction longue ou préavis anormalement long, peu visible
+- penalite_excessive : pénalité, indemnité ou perte de somme disproportionnée
+- resiliation_unilaterale : une seule partie peut sortir du contrat
+- non_concurrence_large : interdiction de concurrence longue, large ou sans contrepartie
+- responsabilite_desequilibree : plafond dérisoire ou exclusion de responsabilité au profit d'une partie
+- juridiction_eloignee : droit ou tribunal étranger pour un contrat exécuté en France
+- cession_propriete_intellectuelle : cession de droits ou d'inventions sans contrepartie
+- revision_prix_unilaterale : prix modifiable par une seule partie
+
+Ne signale que les risques réellement présents. La citation doit être recopiée mot pour mot depuis le contrat. Mets "confiance": "basse" quand tu n'es pas sûr : un doute annoncé vaut mieux qu'une erreur affirmée.
+
+CONTRAT :
+{contrat}
