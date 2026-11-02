@@ -31,6 +31,8 @@ python3 banc/noter.py resultats/tier1
 python3 banc/rapport.py resultats/tier1
 ```
 
+Before the official run, `pilote.sh` measures answer time and GPU memory fit on one contract from a separate pilot corpus (seed 1), so the 20 evaluation contracts are never shown to a model in advance.
+
 With Ollama, start the server with `OLLAMA_CONTEXT_LENGTH=8192` so every model gets the same context size.
 
 ## Author

@@ -50,14 +50,15 @@ def main(argv=None, demander_fn=demander):
     ap.add_argument("--temperature", type=float, default=0.7)
     ap.add_argument("--contrats", nargs="*")
     ap.add_argument("--delai", type=int, default=600)
+    ap.add_argument("--corpus", default=str(C.CORPUS), help="dossier du corpus ; un corpus de pilote hors évaluation évite d'exposer les vrais contrats")
     a = ap.parse_args(argv)
 
-    verite, textes = C.charger_corpus()
+    verite, textes = C.charger_corpus(a.corpus)
     ids = a.contrats or [c["id"] for c in verite["contrats"]]
     sortie = Path(a.sortie)
     (sortie / "reponses").mkdir(parents=True, exist_ok=True)
     meta = {"debut": datetime.now(timezone.utc).isoformat(), "base_url": a.base_url, "modeles": a.modeles,
-            "passes": a.passes, "temperature": a.temperature, "graine_corpus": verite["graine"], "contrats": ids}
+            "passes": a.passes, "temperature": a.temperature, "graine_corpus": verite["graine"], "corpus": a.corpus, "contrats": ids}
     (sortie / "lancement.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     cle = os.environ.get("BANC_API_KEY")
     total, faits, echecs = len(a.modeles) * len(ids) * a.passes, 0, 0
