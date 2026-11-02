@@ -36,3 +36,7 @@ With Ollama, start the server with `OLLAMA_CONTEXT_LENGTH=8192` so every model g
 ## Author
 
 David Ruggieri, France. The code, the fictional contracts and parts of this text were written with an AI assistant (Claude); every decision in the protocol is the author's.
+
+## License
+
+Code (`banc/`): MIT, see `LICENSE`. Corpus, ground truth, results and reports: CC BY 4.0, see `corpus/LICENSE.md`.
