@@ -1,0 +1,832 @@
+{
+  "graine": 20261101,
+  "champs": [
+    "partie_a",
+    "partie_b",
+    "montant_eur",
+    "date_effet",
+    "duree_mois",
+    "preavis_jours",
+    "renouvellement_tacite",
+    "penalite_retard_pct_mois",
+    "loi_applicable",
+    "juridiction",
+    "plafond_responsabilite_eur",
+    "depot_garantie_eur",
+    "duree_confidentialite_ans",
+    "non_concurrence_mois"
+  ],
+  "categories_risque": [
+    "renouvellement_tacite_piege",
+    "penalite_excessive",
+    "resiliation_unilaterale",
+    "non_concurrence_large",
+    "responsabilite_desequilibree",
+    "juridiction_eloignee",
+    "cession_propriete_intellectuelle",
+    "revision_prix_unilaterale"
+  ],
+  "contrats": [
+    {
+      "id": "prestation-01",
+      "type": "prestation",
+      "champs": {
+        "partie_a": "Boréal Conseil SAS",
+        "partie_b": "Moulin Neuf SARL",
+        "montant_eur": 4800,
+        "date_effet": "2026-04-24",
+        "duree_mois": 6,
+        "preavis_jours": 180,
+        "renouvellement_tacite": true,
+        "penalite_retard_pct_mois": 15,
+        "loi_applicable": "droit français",
+        "juridiction": "Reims",
+        "plafond_responsabilite_eur": 100,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "penalite_excessive",
+          "extrait": "Tout retard de paiement entraîne de plein droit une pénalité de 15 % du montant dû par mois de retard.",
+          "explication": "15 % par mois, soit 180 % par an, sans commune mesure avec le taux légal."
+        },
+        {
+          "categorie": "renouvellement_tacite_piege",
+          "extrait": "À défaut de dénonciation par lettre recommandée au moins 180 jours avant son terme, le contrat est reconduit tacitement pour une durée de 12 mois.",
+          "explication": "Préavis de six mois et reconduction pour une durée double, dans un article séparé de la durée."
+        },
+        {
+          "categorie": "responsabilite_desequilibree",
+          "extrait": "La responsabilité du Prestataire est limitée, toutes causes confondues, à la somme de 100 euros.",
+          "explication": "Plafond de 100 euros pour une mission de 4800 euros."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 6300,
+          "pourquoi": "devis initial révisé"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-04-09",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "prestation-02",
+      "type": "prestation",
+      "champs": {
+        "partie_a": "Atelier Verrand SARL",
+        "partie_b": "Pierre-Feuille Éditions",
+        "montant_eur": 7200,
+        "date_effet": "2026-03-08",
+        "duree_mois": 6,
+        "preavis_jours": 30,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": 1,
+        "loi_applicable": "droit français",
+        "juridiction": "Dijon",
+        "plafond_responsabilite_eur": 100,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "responsabilite_desequilibree",
+          "extrait": "La responsabilité du Prestataire est limitée, toutes causes confondues, à la somme de 100 euros.",
+          "explication": "Plafond de 100 euros pour une mission de 7200 euros."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 10200,
+          "pourquoi": "devis initial révisé"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-02-21",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "prestation-03",
+      "type": "prestation",
+      "champs": {
+        "partie_a": "Oriel Patrimoine SCI",
+        "partie_b": "Jardins Marceau SCOP",
+        "montant_eur": 4800,
+        "date_effet": "2026-01-30",
+        "duree_mois": 6,
+        "preavis_jours": 60,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": 1,
+        "loi_applicable": "droit français",
+        "juridiction": "Reims",
+        "plafond_responsabilite_eur": 100,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "responsabilite_desequilibree",
+          "extrait": "La responsabilité du Prestataire est limitée, toutes causes confondues, à la somme de 100 euros.",
+          "explication": "Plafond de 100 euros pour une mission de 4800 euros."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 7800,
+          "pourquoi": "devis initial révisé"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-01-15",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "prestation-04",
+      "type": "prestation",
+      "champs": {
+        "partie_a": "Dunemont Formation SAS",
+        "partie_b": "Lumière Blanche SAS",
+        "montant_eur": 7200,
+        "date_effet": "2026-04-28",
+        "duree_mois": 12,
+        "preavis_jours": 180,
+        "renouvellement_tacite": true,
+        "penalite_retard_pct_mois": 15,
+        "loi_applicable": "droit français",
+        "juridiction": "Reims",
+        "plafond_responsabilite_eur": 100,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "penalite_excessive",
+          "extrait": "Tout retard de paiement entraîne de plein droit une pénalité de 15 % du montant dû par mois de retard.",
+          "explication": "15 % par mois, soit 180 % par an, sans commune mesure avec le taux légal."
+        },
+        {
+          "categorie": "renouvellement_tacite_piege",
+          "extrait": "À défaut de dénonciation par lettre recommandée au moins 180 jours avant son terme, le contrat est reconduit tacitement pour une durée de 24 mois.",
+          "explication": "Préavis de six mois et reconduction pour une durée double, dans un article séparé de la durée."
+        },
+        {
+          "categorie": "responsabilite_desequilibree",
+          "extrait": "La responsabilité du Prestataire est limitée, toutes causes confondues, à la somme de 100 euros.",
+          "explication": "Plafond de 100 euros pour une mission de 7200 euros."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 10200,
+          "pourquoi": "devis initial révisé"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-03-28",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "prestation-05",
+      "type": "prestation",
+      "champs": {
+        "partie_a": "Nord-Est Numérique SAS",
+        "partie_b": "Jardins Marceau SCOP",
+        "montant_eur": 12500,
+        "date_effet": "2026-06-12",
+        "duree_mois": 6,
+        "preavis_jours": 60,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": 1,
+        "loi_applicable": "droit français",
+        "juridiction": "Dijon",
+        "plafond_responsabilite_eur": 12500,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 15500,
+          "pourquoi": "devis initial révisé"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-06-02",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "bail-01",
+      "type": "bail",
+      "champs": {
+        "partie_a": "SCI Rue Haute",
+        "partie_b": "Moulin Neuf SARL",
+        "montant_eur": 1200,
+        "date_effet": "2026-10-03",
+        "duree_mois": 36,
+        "preavis_jours": 90,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit singapourien",
+        "juridiction": "Singapour",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": 2400,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "juridiction_eloignee",
+          "extrait": "Le présent contrat est régi par le droit singapourien. Tout litige sera porté devant les tribunaux de Singapour.",
+          "explication": "Contrat entre deux parties françaises, exécuté en France, renvoyé vers un droit et un tribunal étrangers."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 14400,
+          "pourquoi": "loyer annuel, le champ attend le loyer mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-09-18",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "bail-02",
+      "type": "bail",
+      "champs": {
+        "partie_a": "SCI Rue Haute",
+        "partie_b": "Kervella Logistique SARL",
+        "montant_eur": 1650,
+        "date_effet": "2026-06-19",
+        "duree_mois": 36,
+        "preavis_jours": 90,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Strasbourg",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": 19800,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "revision_prix_unilaterale",
+          "extrait": "Le Bailleur pourra réviser le loyer à tout moment, par simple notification, en fonction de l'évolution du marché local qu'il apprécie seul.",
+          "explication": "Révision à la discrétion du bailleur, sans indice ni plafond."
+        },
+        {
+          "categorie": "penalite_excessive",
+          "extrait": "Le Preneur verse un dépôt de garantie de 19 800 euros, qui reste acquis au Bailleur en cas de départ avant le terme, quel qu'en soit le motif.",
+          "explication": "Douze mois de loyer, perdus en totalité en cas de départ anticipé."
+        },
+        {
+          "categorie": "resiliation_unilaterale",
+          "extrait": "Le Bailleur peut résilier le bail à tout moment, sans motif, moyennant un préavis de 90 jours. Le Preneur ne peut résilier avant le terme.",
+          "explication": "Faculté de sortie réservée au seul bailleur."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 19800,
+          "pourquoi": "loyer annuel, le champ attend le loyer mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-06-04",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "bail-03",
+      "type": "bail",
+      "champs": {
+        "partie_a": "SCI Rue Haute",
+        "partie_b": "Éclats de Lune EURL",
+        "montant_eur": 1200,
+        "date_effet": "2026-02-22",
+        "duree_mois": 36,
+        "preavis_jours": 90,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit luxembourgeois",
+        "juridiction": "Luxembourg",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": 14400,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "penalite_excessive",
+          "extrait": "Le Preneur verse un dépôt de garantie de 14 400 euros, qui reste acquis au Bailleur en cas de départ avant le terme, quel qu'en soit le motif.",
+          "explication": "Douze mois de loyer, perdus en totalité en cas de départ anticipé."
+        },
+        {
+          "categorie": "juridiction_eloignee",
+          "extrait": "Le présent contrat est régi par le droit luxembourgeois. Tout litige sera porté devant les tribunaux de Luxembourg.",
+          "explication": "Contrat entre deux parties françaises, exécuté en France, renvoyé vers un droit et un tribunal étrangers."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 14400,
+          "pourquoi": "loyer annuel, le champ attend le loyer mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-02-21",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "bail-04",
+      "type": "bail",
+      "champs": {
+        "partie_a": "SCI Rue Haute",
+        "partie_b": "Moulin Neuf SARL",
+        "montant_eur": 1650,
+        "date_effet": "2026-02-19",
+        "duree_mois": 36,
+        "preavis_jours": 90,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit luxembourgeois",
+        "juridiction": "Luxembourg",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": 3300,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "juridiction_eloignee",
+          "extrait": "Le présent contrat est régi par le droit luxembourgeois. Tout litige sera porté devant les tribunaux de Luxembourg.",
+          "explication": "Contrat entre deux parties françaises, exécuté en France, renvoyé vers un droit et un tribunal étrangers."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 19800,
+          "pourquoi": "loyer annuel, le champ attend le loyer mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-02-18",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "bail-05",
+      "type": "bail",
+      "champs": {
+        "partie_a": "Oriel Patrimoine SCI",
+        "partie_b": "Boréal Conseil SAS",
+        "montant_eur": 1200,
+        "date_effet": "2026-01-31",
+        "duree_mois": 36,
+        "preavis_jours": 90,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Besançon",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": 2400,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 14400,
+          "pourquoi": "loyer annuel, le champ attend le loyer mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-01-16",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "nda-01",
+      "type": "nda",
+      "champs": {
+        "partie_a": "Lumière Blanche SAS",
+        "partie_b": "Éclats de Lune EURL",
+        "montant_eur": null,
+        "date_effet": "2026-01-06",
+        "duree_mois": 24,
+        "preavis_jours": null,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Strasbourg",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": 99,
+        "non_concurrence_mois": 1188
+      },
+      "pieges": [
+        {
+          "categorie": "non_concurrence_large",
+          "extrait": "L'obligation de confidentialité survit 99 ans à l'expiration de l'accord et interdit à la Partie réceptrice toute activité concurrente pendant cette période.",
+          "explication": "Une non-concurrence de fait, sans limite raisonnable ni contrepartie, cachée dans la clause de confidentialité."
+        },
+        {
+          "categorie": "cession_propriete_intellectuelle",
+          "extrait": "Toute idée, amélioration ou invention conçue par la Partie réceptrice pendant la durée de l'accord appartient à la Partie divulgatrice, sans contrepartie.",
+          "explication": "Un accord de confidentialité qui transfère les inventions de la partie réceptrice."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "date_effet",
+          "valeur": "2026-01-06",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "nda-02",
+      "type": "nda",
+      "champs": {
+        "partie_a": "Pierre-Feuille Éditions",
+        "partie_b": "Lumière Blanche SAS",
+        "montant_eur": null,
+        "date_effet": "2026-08-25",
+        "duree_mois": 24,
+        "preavis_jours": null,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Metz",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": 99,
+        "non_concurrence_mois": 1188
+      },
+      "pieges": [
+        {
+          "categorie": "non_concurrence_large",
+          "extrait": "L'obligation de confidentialité survit 99 ans à l'expiration de l'accord et interdit à la Partie réceptrice toute activité concurrente pendant cette période.",
+          "explication": "Une non-concurrence de fait, sans limite raisonnable ni contrepartie, cachée dans la clause de confidentialité."
+        },
+        {
+          "categorie": "penalite_excessive",
+          "extrait": "Toute divulgation, même involontaire, entraîne le paiement d'une indemnité forfaitaire de 500 000 euros, sans préjudice de dommages et intérêts complémentaires.",
+          "explication": "Montant forfaitaire sans lien avec un préjudice, même pour une faute involontaire."
+        },
+        {
+          "categorie": "cession_propriete_intellectuelle",
+          "extrait": "Toute idée, amélioration ou invention conçue par la Partie réceptrice pendant la durée de l'accord appartient à la Partie divulgatrice, sans contrepartie.",
+          "explication": "Un accord de confidentialité qui transfère les inventions de la partie réceptrice."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "date_effet",
+          "valeur": "2026-08-25",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "nda-03",
+      "type": "nda",
+      "champs": {
+        "partie_a": "Oriel Patrimoine SCI",
+        "partie_b": "Quai Ouest SAS",
+        "montant_eur": null,
+        "date_effet": "2026-06-11",
+        "duree_mois": 12,
+        "preavis_jours": null,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Mulhouse",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": 3,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "penalite_excessive",
+          "extrait": "Toute divulgation, même involontaire, entraîne le paiement d'une indemnité forfaitaire de 500 000 euros, sans préjudice de dommages et intérêts complémentaires.",
+          "explication": "Montant forfaitaire sans lien avec un préjudice, même pour une faute involontaire."
+        },
+        {
+          "categorie": "cession_propriete_intellectuelle",
+          "extrait": "Toute idée, amélioration ou invention conçue par la Partie réceptrice pendant la durée de l'accord appartient à la Partie divulgatrice, sans contrepartie.",
+          "explication": "Un accord de confidentialité qui transfère les inventions de la partie réceptrice."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "date_effet",
+          "valeur": "2026-06-11",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "nda-04",
+      "type": "nda",
+      "champs": {
+        "partie_a": "Lumière Blanche SAS",
+        "partie_b": "Atelier Verrand SARL",
+        "montant_eur": null,
+        "date_effet": "2026-04-26",
+        "duree_mois": 24,
+        "preavis_jours": null,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Strasbourg",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": 99,
+        "non_concurrence_mois": 1188
+      },
+      "pieges": [
+        {
+          "categorie": "non_concurrence_large",
+          "extrait": "L'obligation de confidentialité survit 99 ans à l'expiration de l'accord et interdit à la Partie réceptrice toute activité concurrente pendant cette période.",
+          "explication": "Une non-concurrence de fait, sans limite raisonnable ni contrepartie, cachée dans la clause de confidentialité."
+        },
+        {
+          "categorie": "cession_propriete_intellectuelle",
+          "extrait": "Toute idée, amélioration ou invention conçue par la Partie réceptrice pendant la durée de l'accord appartient à la Partie divulgatrice, sans contrepartie.",
+          "explication": "Un accord de confidentialité qui transfère les inventions de la partie réceptrice."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "date_effet",
+          "valeur": "2026-04-26",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "nda-05",
+      "type": "nda",
+      "champs": {
+        "partie_a": "Lumière Blanche SAS",
+        "partie_b": "Groupe Hallier SAS",
+        "montant_eur": null,
+        "date_effet": "2026-05-27",
+        "duree_mois": 24,
+        "preavis_jours": null,
+        "renouvellement_tacite": false,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Metz",
+        "plafond_responsabilite_eur": null,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": 3,
+        "non_concurrence_mois": null
+      },
+      "pieges": [],
+      "leurres": [
+        {
+          "champ": "date_effet",
+          "valeur": "2026-05-27",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "cgv-01",
+      "type": "cgv",
+      "champs": {
+        "partie_a": "Ibis Rouge Studio",
+        "partie_b": "Sophie Vellard, entrepreneur individuel",
+        "montant_eur": 49,
+        "date_effet": "2026-07-10",
+        "duree_mois": 12,
+        "preavis_jours": 30,
+        "renouvellement_tacite": true,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Besançon",
+        "plafond_responsabilite_eur": 0,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "revision_prix_unilaterale",
+          "extrait": "L'Éditeur peut modifier ses tarifs à tout moment ; le nouveau prix s'applique dès sa publication sur le site, sans autre information du Client.",
+          "explication": "Hausse sans préavis ni faculté de résiliation."
+        },
+        {
+          "categorie": "responsabilite_desequilibree",
+          "extrait": "L'Éditeur n'est responsable d'aucun dommage, direct ou indirect, y compris la perte des données du Client.",
+          "explication": "Exclusion totale, y compris de la perte de données, pour un service qui les héberge."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 588,
+          "pourquoi": "total annuel, le champ attend le prix mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-07-10",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "cgv-02",
+      "type": "cgv",
+      "champs": {
+        "partie_a": "Moulin Neuf SARL",
+        "partie_b": "Hélène Gasquet, entrepreneur individuel",
+        "montant_eur": 290,
+        "date_effet": "2026-04-11",
+        "duree_mois": 12,
+        "preavis_jours": 30,
+        "renouvellement_tacite": true,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Mulhouse",
+        "plafond_responsabilite_eur": 0,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "responsabilite_desequilibree",
+          "extrait": "L'Éditeur n'est responsable d'aucun dommage, direct ou indirect, y compris la perte des données du Client.",
+          "explication": "Exclusion totale, y compris de la perte de données, pour un service qui les héberge."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 3480,
+          "pourquoi": "total annuel, le champ attend le prix mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-04-11",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "cgv-03",
+      "type": "cgv",
+      "champs": {
+        "partie_a": "Éclats de Lune EURL",
+        "partie_b": "Marc Aubrac, entrepreneur individuel",
+        "montant_eur": 149,
+        "date_effet": "2026-08-06",
+        "duree_mois": 12,
+        "preavis_jours": 30,
+        "renouvellement_tacite": true,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Colmar",
+        "plafond_responsabilite_eur": 1788,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "revision_prix_unilaterale",
+          "extrait": "L'Éditeur peut modifier ses tarifs à tout moment ; le nouveau prix s'applique dès sa publication sur le site, sans autre information du Client.",
+          "explication": "Hausse sans préavis ni faculté de résiliation."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 1788,
+          "pourquoi": "total annuel, le champ attend le prix mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-08-06",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "cgv-04",
+      "type": "cgv",
+      "champs": {
+        "partie_a": "Groupe Hallier SAS",
+        "partie_b": "Hélène Gasquet, entrepreneur individuel",
+        "montant_eur": 290,
+        "date_effet": "2026-07-20",
+        "duree_mois": 12,
+        "preavis_jours": 30,
+        "renouvellement_tacite": true,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit luxembourgeois",
+        "juridiction": "Luxembourg",
+        "plafond_responsabilite_eur": 0,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [
+        {
+          "categorie": "responsabilite_desequilibree",
+          "extrait": "L'Éditeur n'est responsable d'aucun dommage, direct ou indirect, y compris la perte des données du Client.",
+          "explication": "Exclusion totale, y compris de la perte de données, pour un service qui les héberge."
+        },
+        {
+          "categorie": "juridiction_eloignee",
+          "extrait": "Le présent contrat est régi par le droit luxembourgeois. Tout litige sera porté devant les tribunaux de Luxembourg.",
+          "explication": "Contrat entre deux parties françaises, exécuté en France, renvoyé vers un droit et un tribunal étrangers."
+        }
+      ],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 3480,
+          "pourquoi": "total annuel, le champ attend le prix mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-07-20",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    },
+    {
+      "id": "cgv-05",
+      "type": "cgv",
+      "champs": {
+        "partie_a": "Dunemont Formation SAS",
+        "partie_b": "Thomas Rieuvert, entrepreneur individuel",
+        "montant_eur": 149,
+        "date_effet": "2026-03-25",
+        "duree_mois": 12,
+        "preavis_jours": 30,
+        "renouvellement_tacite": true,
+        "penalite_retard_pct_mois": null,
+        "loi_applicable": "droit français",
+        "juridiction": "Reims",
+        "plafond_responsabilite_eur": 1788,
+        "depot_garantie_eur": null,
+        "duree_confidentialite_ans": null,
+        "non_concurrence_mois": null
+      },
+      "pieges": [],
+      "leurres": [
+        {
+          "champ": "montant_eur",
+          "valeur": 1788,
+          "pourquoi": "total annuel, le champ attend le prix mensuel"
+        },
+        {
+          "champ": "date_effet",
+          "valeur": "2026-03-25",
+          "pourquoi": "date de signature, pas date d'effet"
+        }
+      ]
+    }
+  ]
+}
