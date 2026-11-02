@@ -116,6 +116,26 @@ class Interrogation(unittest.TestCase):
             res = noter.noter_lancement(d)["modeles"]["m:1"]
             self.assertEqual(res["reponses"], 4)
 
+    def test_corpus_de_pilote_separe(self):
+        import generer_corpus
+        with tempfile.TemporaryDirectory() as d:
+            corpus = Path(d, "corpus")
+            sys_argv = sys.argv
+            sys.argv = ["generer_corpus.py", "--graine", "1", "--sortie", str(corpus)]
+            try:
+                generer_corpus.main()
+            finally:
+                sys.argv = sys_argv
+            vrai = C.charger_corpus()[1]["prestation-01"]
+            pilote = C.charger_corpus(corpus)[1]["prestation-01"]
+            self.assertNotEqual(vrai, pilote)
+            vus = []
+            faux = lambda *a, **k: (vus.append(a[2]) or {"choices": [{"message": {"content": "{}"}}]}, 0.0)
+            interroger.main(["--sortie", str(Path(d, "r")), "--modeles", "m", "--passes", "1",
+                             "--contrats", "prestation-01", "--corpus", str(corpus)], faux)
+            self.assertIn(pilote.splitlines()[3], vus[0])
+            self.assertNotIn(vrai.splitlines()[3], vus[0])
+
 
 if __name__ == "__main__":
     unittest.main()

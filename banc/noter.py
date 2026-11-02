@@ -161,8 +161,9 @@ def noter_lancement(dossier, corpus=C.CORPUS):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("dossier")
+    ap.add_argument("--corpus", default=str(C.CORPUS))
     a = ap.parse_args()
-    res = noter_lancement(a.dossier)
+    res = noter_lancement(a.dossier, a.corpus)
     for modele, m in res["modeles"].items():
         print(f"{modele} : {m['reponses']} réponses, valeurs fausses {m['taux_valeurs_fausses']:.1%}, "
               f"inventions {m['taux_inventions']:.1%}, fausses assurances {m['fausses_assurances']}, "
